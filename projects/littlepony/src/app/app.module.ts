@@ -14,6 +14,8 @@ import { LocationRacePipe } from './location-race.pipe';
 import { AddPonyComponent } from './add-pony/add-pony.component';
 import { MenuComponent } from './menu/menu.component';
 import { AddRaceComponent } from './add-race/add-race.component';
+import { AddPonyReactComponent } from './add-pony-react/add-pony-react.component';
+import { AddRaceReactComponent } from './add-race-react/add-race-react.component';
 
 const ROUTES: Routes =[
   {path:'', component: PoniesComponent},
@@ -32,7 +34,9 @@ const ROUTES: Routes =[
     LocationRacePipe,
     AddPonyComponent,
     MenuComponent,
-    AddRaceComponent
+    AddRaceComponent,
+    AddPonyReactComponent,
+    AddRaceReactComponent
   ],
   imports: [
     BrowserModule,
