@@ -1,0 +1,6 @@
+{{race.location| locationRace}} - {{race.date | date: "dd/MM/yy"}}
+<ul>
+    <li *ngFor="let p of race.ponies">
+        <app-pony-detail [pony]="p"></app-pony-detail>
+    </li>
+</ul>
