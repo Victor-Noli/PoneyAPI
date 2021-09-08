@@ -34,10 +34,12 @@ export class AddPonyComponent implements OnInit {
   }
 
   onSubmit() : void{
-    this.newPony.id = PONIES.length;
-    PONIES.push(this.newPony);
-    // avec les mock casser le pointeur qui fait que tous les poney ajoutés sont les mêmes
-    this.newPony = new Pony();
+    if (this.add){
+      this.newPony.id = PONIES.length;
+      PONIES.push(this.newPony);
+      // avec les mock casser le pointeur qui fait que tous les poney ajoutés sont les mêmes
+      this.newPony = new Pony();
+    }
     this.router.navigate(['']);
   }
 
