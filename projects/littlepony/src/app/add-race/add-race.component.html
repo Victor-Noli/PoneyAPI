@@ -1,13 +1,13 @@
 <h1 *ngIf="add">Add a new race</h1>
 <h1 *ngIf="!add">Update your new race</h1>
 <form (ngSubmit)="onSubmit()">
-  Place <input type="text" id="location" required [(ngModel)]="model.location" name="location" /> Date
+  Place <input type="text" id="location" required [(ngModel)]="model.location" name="location" pInputText/> Date
 
-  <input type="text" id="date" required [(ngModel)]="model.date" name="date" />
+  <input type="text" id="date" required [(ngModel)]="model.date" name="date" pInputText/>
   <div *ngFor="let p of allPonies; let i=index">
     {{p.name}} <input type="checkbox" name="{{p.name}}" (change)="poniesBool[i] = !poniesBool[i]">
   </div>
-  <button *ngIf="add" type="submit">Save</button>
-  <button *ngIf="!add" type="submit">Update</button>
+  <button *ngIf="add" type="submit" pButton>Save</button>
+  <button *ngIf="!add" type="submit" pButton>Update</button>
 
 </form>

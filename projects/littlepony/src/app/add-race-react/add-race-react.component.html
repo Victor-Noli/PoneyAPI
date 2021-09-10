@@ -1,1 +1,16 @@
-<p>add-race-react works!</p>
+<h1> Enter your new race</h1>
+<form [formGroup]="ponyForm" (ngSubmit)="onSubmit()">
+  <label>Name</label>
+  <input type="text" id="name" name="name" formControlName="name" pInputText/>
+  <br/>
+
+  <label>Color</label>
+  <input type="text" id="color" formControlName="color" name="color" pInputText/>
+
+  <br/>
+
+  <label>Age</label>
+  <input type="text" id="age" name="age" formControlName="age" pInputText/>
+
+  <button type="submit" pButton>Save</button>
+</form>
