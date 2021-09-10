@@ -10,7 +10,7 @@ describe('PonyDetailComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ PonyDetailComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

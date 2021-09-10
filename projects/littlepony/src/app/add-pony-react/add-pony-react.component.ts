@@ -25,7 +25,7 @@ export class AddPonyReactComponent implements OnInit {
 
   onSubmit() : void{
     let res: Pony = this.ponyForm.value;
-    //PONIES.push(res);
+
     this.ponyServcice.addPony(res);
     this.router.navigate(['']);
   }

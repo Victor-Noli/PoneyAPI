@@ -1,18 +1,18 @@
-<h1 *ngIf="add"> Entrer votre nouveau poney </h1>
-<h1 *ngIf="!add"> Mettre à jour votre poney </h1>
+<h1 *ngIf="add"> Create a new pony </h1>
+<h1 *ngIf="!add"> Update your pony </h1>
 <form (ngSubmit)="onSubmit()">
-    <label>Nom</label>
-    <input type="text" id="name" name="name" [(ngModel)]="newPony.name" />
-    <br/>
+  <label>Name</label>
+  <input type="text" id="name" name="name" [(ngModel)]="newPony.name" />
+  <br/>
 
-    <label>Couleur</label>
-    <input type="text" id="color" [(ngModel)]="newPony.color" name="color" />
+  <label>Color</label>
+  <input type="text" id="color" [(ngModel)]="newPony.color" name="color" />
 
-    <br/>
+  <br/>
 
-    <label>Age</label>
-    <input type="text" id="age" name="age" [(ngModel)]="newPony.age" />
+  <label>Age</label>
+  <input type="text" id="age" name="age" [(ngModel)]="newPony.age" />
 
-    <button *ngIf="add" type="submit">Enregistrer</button>
-    <button *ngIf="!add" type="submit">Mettre à jour</button>
+  <button *ngIf="add" type="submit">Save</button>
+  <button *ngIf="!add" type="submit">Update</button>
 </form>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -15,13 +15,15 @@ import { AddPonyComponent } from './add-pony/add-pony.component';
 import { MenuComponent } from './menu/menu.component';
 import { AddRaceComponent } from './add-race/add-race.component';
 import { AddPonyReactComponent } from './add-pony-react/add-pony-react.component';
-import { AddRaceReactComponent } from './add-race-react/add-race-react.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const ROUTES: Routes =[
   {path:'', component: PoniesComponent},
   {path:'races', component: RacesComponent},
-  {path:'add-pony', component: AddPonyComponent},
+  {path:'add-pony', component: AddPonyReactComponent},
+  {path:'update-pony/:id', component: AddPonyComponent},
   {path:'add-race', component: AddRaceComponent},
+  {path:'update-race/:id', component: AddRaceComponent},
 ];
 
 @NgModule({
@@ -35,16 +37,16 @@ const ROUTES: Routes =[
     AddPonyComponent,
     MenuComponent,
     AddRaceComponent,
-    AddPonyReactComponent,
-    AddRaceReactComponent
+    AddPonyReactComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        RouterModule.forRoot(ROUTES),
-        ReactiveFormsModule,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    RouterModule.forRoot(ROUTES),
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

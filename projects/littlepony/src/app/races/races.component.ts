@@ -10,7 +10,7 @@ import { Race } from '../race';
 export class RacesComponent implements OnInit {
 
   races : Array<Race>;
-  constructor() { 
+  constructor() {
     this.races = RACES;
   }
 
